@@ -23,6 +23,8 @@ public class EditActivity extends AppCompatActivity {
     private EditText editTextEnglish;
     private EditText editTextTranslate;
 
+    private int id = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +42,12 @@ public class EditActivity extends AppCompatActivity {
 
                 dataHelper = new DataHelper(context);
                 dataHelper.open();
-                Cursor cursor = dataHelper.getAllData();
+                final Cursor cursor = dataHelper.getAllData();
+
+                id = cursor.getCount() + 1;
 
                 String textEnglish = editTextEnglish.getText().toString().trim();
                 String textTranslate = editTextTranslate.getText().toString().trim();
-                int id = cursor.getCount() + 1;
 
                 if (textEnglish.isEmpty())
                     editTextEnglish.setError("This field cannot be empty !");
@@ -60,7 +63,7 @@ public class EditActivity extends AppCompatActivity {
                     editTextEnglish.setText(null);
                     editTextTranslate.setText(null);
 
-                    Toast.makeText(context, "Data Inserted",
+                    Toast.makeText(context, "Data Inserted "+id,
                             Toast.LENGTH_SHORT).show();
                 }
 

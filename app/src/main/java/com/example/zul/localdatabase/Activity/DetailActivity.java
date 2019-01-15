@@ -33,7 +33,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView textViewEnglish;
     private TextView textViewTranslate;
 
-    private int id;
+    private int id = 0;
     private String english;
     private String translate;
 

@@ -32,6 +32,7 @@ public class DataHelper {
 
     public long insertData(DataModel model) {
         ContentValues values = new ContentValues();
+        values.put(DatabaseContract.COLUMN_ID, model.getId());
         values.put(DatabaseContract.COLUMN_WORD, model.getEnglishWord());
         values.put(DatabaseContract.COLUMN_TRANSLATE, model.getEnglishTranslate());
 

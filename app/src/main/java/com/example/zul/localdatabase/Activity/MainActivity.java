@@ -165,14 +165,11 @@ public class MainActivity extends AppCompatActivity {
         final Cursor cursor = dataHelper.getAllData();
         if (cursor.getCount() != 0) {
             while (cursor.moveToNext()) {
-                int id = cursor.getInt(0);
-                String english = cursor.getString(1);
-                String translate = cursor.getString(2);
+                int id = cursor.getInt(1);
+                String english = cursor.getString(2);
+                String translate = cursor.getString(3);
                 dataModels.add(new DataModel(id, english, translate));
             }
-        } else {
-            Toast.makeText(context, "Empty",
-                    Toast.LENGTH_SHORT).show();
         }
 
         dataHelper.close();
