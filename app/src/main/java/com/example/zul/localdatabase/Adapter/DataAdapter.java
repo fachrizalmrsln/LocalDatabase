@@ -49,7 +49,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataHolder> {
         dataHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra(DetailActivity.EXTRA_ID, arrayList.get(i).getId());
                 intent.putExtra(DetailActivity.EXTRA_ENGLISH, arrayList.get(i).getEnglishWord());
