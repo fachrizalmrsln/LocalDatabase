@@ -1,2 +1,4 @@
 # LocalDatabase
 LocalDatabase Structure
+.
+
