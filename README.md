@@ -5,4 +5,3 @@ LocalDatabase Structure
 .
 .
 .
-.
