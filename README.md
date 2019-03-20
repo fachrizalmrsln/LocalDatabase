@@ -3,4 +3,3 @@ LocalDatabase Structure
 .
 .
 .
-.
