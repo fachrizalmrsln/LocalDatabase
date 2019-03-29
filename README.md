@@ -1,2 +1,2 @@
-# LocalDatabase Notes App
+# LocalDatabase
 LocalDatabase Structure Using SQLite
